@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+/***** SECTION 1 COLOR **********/
+.str{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+/* NAV LINKS COLOR */
+.start{
+    background-color: rgb(49, 49, 49);
+    height: 160px;
+}
+.logo-txt{
+    padding: 22px 17px 0px 17px;
+    font-size: 40px;
+    color: #ff452a;
+    font-family: 'Mukta', sans-serif;
+    text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkblue;
+}
+/***************** NAV LINKS **************/
+        /* move right  */
+.nav-links{
+    align-items: right;
+    text-align: right;
+    justify-content: space-between;
+    padding-right: 40px;
+    background-color: rgb(49, 49, 49);
+}
+        /*  TXTS AND FIXS */
+.nav-links ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    font-family: 'poppins';
+}
+       /* HOVER */
+.nav-links ul li a:hover{
+  color: #ff2000;
+  transition: 0.5s;
+  border-radius: 20px;
+  background-color: red;
+  color: white;
+  box-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkblue;
+}
+/* SUBSCRIBE BUTTON */
+.nav-links ul li .sub{
+    border: #ff2000 1px;
+    border-radius: 20px;
+    background: #ff2000;
+}
+.nav-links ul li .sub:hover{
+  color: whitesmoke;
+  box-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkblue;
+}
+.topnav{
+    display: none;
+}
+.ctn{
+    padding: 40px 50px;
+    margin-top: 100px 40px;
+    text-align: center;
+    align-items: center;
+}
+.ctn span{
+    float: center;
+    font-size: 30px;
+    font-family: 'Mukta';
+    display: inline-block;
+}
+.ctn span .bl{
+    color: #ff452a;
+    display: inline-block;
+}
+.ctn span .wh{
+    color: white;
+    display: inline-block;
+    text-shadow: 1px 1px 2px black, 2px darkred, 0 0 2px red;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    text-decoration-color: #ff452a;
+    text-underline-offset: 0.6rem;
+}
+.ctn a{
+    margin: 20px 20px;
+    display: inline-block;
+    color: white;
+    background: #ff452a;
+    padding: 10px 20px;
+    border-radius: 2.5px;
+    font-size: 17px;
+    text-decoration: none;
+    font-family: 'Mukta';
+}
+.ctn a:hover{
+    transition: 0.5s;
+    box-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkblue;
+}
+
+
+
+
+@media(max-width: 720px){
+    /* nav links */
+ /* Add a black background color to the top navigation */
+ .nav-links{
+    display: none;
+ }
+ .topnav {
+    background-color: rgb(49, 49, 49) ;
+    overflow: hidden;
+    display: block;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    align-items: center;
+    font-family: 'Poppins';
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav .home:hover{
+    background-color: #ff452a;
+    color: white;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav .home{
+    background-color: #ff452a;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+}
