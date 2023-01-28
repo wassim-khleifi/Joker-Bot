@@ -1,5 +1,11 @@
 <img src= "joker bot.png">
 
+![Downloads](https://img.shields.io/github/downloads/clown83848474/Discord-Bot/total.svg)
+![License](https://img.shields.io/github/license/clown83848474/Discord-Bot.svg)
+![size](https://img.shields.io/github/repo-size/clown83848474/Discord-Bot)
+<img alt="Bitbucket open issues" src="https://img.shields.io/bitbucket/issues/clown83848474/Discord-Bot">
+<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/Discord.py">
+
 # Joker Bot
 
 
