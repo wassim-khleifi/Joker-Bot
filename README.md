@@ -30,6 +30,7 @@
   ```
   pip install discord.py
   pip install dotenv
+  pip install youtube_dl
   ```
   * 2- Editing config.py:
   ```py
