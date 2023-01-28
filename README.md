@@ -1,4 +1,4 @@
-<img src= "banner.png">
+<img src= "joker bot.png">
 
 # Joker Bot
 
