@@ -1,4 +1,4 @@
-<img src= "https://user-images.githubusercontent.com/114299126/215194542-5bb4a32b-8c29-4375-95bd-45858a9cb36f.png" width = "900px" height="300px">
+<img src= "banner.png">
 
 # Joker Bot
 
@@ -42,7 +42,15 @@
 
 ## Hosting:
 * You Can Host The Website With  <a href="https://app.infinityfree.net">Host</a>
-* If You Got Problems You Can Contact Me On Discord 
+* If You Got Problems You Can Contact Me On Discord <a href="https://discord.gg/HbxRqqraqz">Discord</a>
 
+## Commands:
+* **help**
+* **Moderation**: ban , kick , clear
+* **Economy**: work , beg , balance , deposit, withdraw , shop , buy , sell , bag
+* **Ticket**: tcreate , tclose , tsetrole , tsetadmin , tservice
+* **Events**: number , giveaway , darkweb
+* **Information**: support , server , ping
+* **Music**: ***SOON***
 ## Editing
 This bot (and the source code here) might not be easy to edit for inexperienced programmers. The main purpose of having the source public is to show the capabilities of the libraries, to allow others to understand how the bot works, and to allow those knowledgeable about discord.py and Discord bot development to contribute. There are many requirements and dependencies required to edit and compile it, and there will not be support provided for people looking to make changes on their own. Instead, consider making a feature request (see the above section). If you choose to make edits, please do so in accordance with the MIT License.
