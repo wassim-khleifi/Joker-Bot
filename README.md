@@ -22,9 +22,11 @@
   * A Beautiful Responsive Website (Pc And Phone)
   * More Updates And Commands In Future
 ### Requirements
-  * Python +3.8V
+  * Python +3.7V
   * Discord.py
   * dotenv
+  * youtube_dl
+  * wavelink
 ### Setup
   * 1- Installing Requirements:
   ```
