@@ -28,39 +28,42 @@
   * youtube_dl
   * wavelink
 ### Setup
-  * 1- Installing Requirements:
+  * **__1- Installing Requirements:__**
   ```
   pip install discord.py
   pip install dotenv
   pip install youtube_dl
   pip install wavelink
   ```
-  * 2- Editing config.py:
+  * **__2- Editing config.py:__**
   ```py
   token = "YOUR_TOKEN"
-  prefix = "YOUR_PREFIX"
+  prefix = "PREFIX"
+  help_thumbnail = "BANNER LINK!"
+  TICKET_EMBED = "BANNER LINK!"
+  POLL_EMBED = "BANNER LINK!"
+  THEME_COLOUR = discord.Colour.random()
   ```
   **NOTE: Make Sure To Enable The Intents In Developer Portal**
   <img src="https://discordpy.readthedocs.io/en/stable/_images/discord_privileged_intents.png" >
   
-  * 3- Running The Code:
+  * **__3- Running The Code:__**
   ```sh
   python main.py
   ```
 
-  
-
+ 
 ## Hosting:
 * You Can Host The Website With  <a href="https://app.infinityfree.net">Host</a>
 * If You Got Problems You Can Contact Me On Discord <a href="https://discord.gg/HbxRqqraqz">Discord</a>
 
 ## Commands:
 * **help**
-* **Moderation**: ban , kick , clear
-* **Economy**: work , beg , balance , deposit, withdraw , shop , buy , sell , bag
-* **Ticket**: tcreate , tclose , tsetrole , tsetadmin , tservice
+* **Moderation**: ban , kick , clear , poll
+* **Economy**: work , beg , balance , deposit, withdraw , shop , buy , sell , bag | server_coins , servers_shop , buy_item | addcoins_sv , add_money
+* **Ticket**: tcreate , tclose
 * **Events**: number , giveaway , darkweb
-* **Information**: support , server , ping
+* **Information**: support , server , ping , vote
 * **Music**: join , leave , play , pause , stop , resume , volume
 ## Editing
 This bot (and the source code here) might not be easy to edit for inexperienced programmers. The main purpose of having the source public is to show the capabilities of the libraries, to allow others to understand how the bot works, and to allow those knowledgeable about discord.py and Discord bot development to contribute. There are many requirements and dependencies required to edit and compile it, and there will not be support provided for people looking to make changes on their own. Instead, consider making a feature request (see the above section). If you choose to make edits, please do so in accordance with the MIT License.
