@@ -28,14 +28,14 @@
   * youtube_dl
   * wavelink
 ### Setup
-  * **__1- Installing Requirements:__**
+  * ***__1- Installing Requirements:__***
   ```
   pip install discord.py
   pip install dotenv
   pip install youtube_dl
   pip install wavelink
   ```
-  * **__2- Editing config.py:__**
+  * ***__2- Editing config.py:__***
   ```py
   token = "YOUR_TOKEN"
   prefix = "PREFIX"
@@ -47,7 +47,7 @@
   **NOTE: Make Sure To Enable The Intents In Developer Portal**
   <img src="https://discordpy.readthedocs.io/en/stable/_images/discord_privileged_intents.png" >
   
-  * **__3- Running The Code:__**
+  * ***__3- Running The Code:__***
   ```sh
   python main.py
   ```
