@@ -7,11 +7,6 @@ import config
 from config import *
 
 bot = commands.Bot(command_prefix= prefix, intents=discord.Intents.all(), help_command=None)
-THEME_COLOUR = discord.Colour.random()
-EVENTS_COLOR = discord.Colour.random()
-INFO_COLOR = discord.Colour.blurple()
-MOD_COLOR = discord.Colour.blurple()
-ERROR_COLOUR = discord.Colour.red()
 class Select(discord.ui.Select):
     def __init__(self):
         options=[
@@ -26,12 +21,13 @@ class Select(discord.ui.Select):
     async def callback(self, interaction: discord.Interaction):
         main = embed = discord.Embed(title="Bot Commands ??" ,  description=f"""
 Help Commands
-""" , colour= EVENTS_COLOR)
+""" , colour= THEME_COLOUR)
         mod = discord.Embed(title="***Moderation Commands***", description=f"""
 ```yaml
 > {prefix}ban
 > {prefix}kick
-> {prefix}clear```
+> {prefix}clear
+> {prefix}poll```
 """)
         events = discord.Embed(title="***Moderation Commands***", description=f"""
 ```yaml
@@ -48,6 +44,7 @@ Help Commands
 """)
         information.set_image(url="https://media.discordapp.net/attachments/1059151958570713098/1062780735313952912/standard_6.gif?width=738&height=415")
         economy = discord.Embed(title="***Moderation Commands***", description=f"""
+***__Users Economy__***
 ```yaml
 > {prefix}balance
 > {prefix}work
@@ -57,19 +54,27 @@ Help Commands
 > {prefix}shop
 > {prefix}bag
 > {prefix}buy
-> {prefix}sell```
+> {prefix}sell
+> {prefix}richest```
+***__Servers Economy__***
+```yaml
+> {prefix}server_coins
+> {prefix}servers_shop
+> {prefix}buy_item 'item'
+```
+***__Developer Commands__**
+```yaml
+> {prefix}addcoins_sv 'amount'
+> {prefix}add_money 'member' 'amount'
+```
 """)
         ticket = discord.Embed(title="***Ticket Commands***", description=f"""
 ```yaml
-> {prefix}tcreate 'reason'
-> {prefix}tclose 'reason'
-> {prefix}tsetadmin 
-> {prefix}tsetmanager
-> {prefix}tservice 'off/on'
-> {prefix}setrole [@role (Ticket Manager Role)] [@role (Ticket Admin Role)]
+> {prefix}tcreate
+> {prefix}tclose
 ```
 """)
-        music = discord.Embed(title="***Ticket Commands***", description=f"""
+        music = discord.Embed(title="***Music Commands***", description=f"""
 ```yaml
 > {prefix}join
 > {prefix}leave
@@ -112,8 +117,8 @@ async def help(ctx):
 • You Can Now Make This Bot Using Replit Or Any Other Code Editor!
 • Click The Button Below To See The Source Code!
 ```
-""" , colour= EVENTS_COLOR)
-	embed.set_image(url="https://media.discordapp.net/attachments/1059151958570713098/1062413232809181304/standard_3.gif?width=738&height=415")
+""" , colour= THEME_COLOUR)
+	embed.set_image(url=help_thumbnail)
 	invite = Button(label="Invite me" , url="https://discord.com/api/oauth2/authorize?client_id=1022850160201584681&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.gg%2FHbxRqqraqz&response_type=code&scope=bot" , emoji="🤖")
 	dv = Button(label="Developer" , url="https://github.com/clown83848474" , emoji="🤡")
 	await ctx.send(embed=embed,view=SelectView())

@@ -10,15 +10,6 @@ import json
 import economy
 from economy.system import *
 bot = commands.Bot(command_prefix= prefix, case_insensitive=True  , intents=discord.Intents.all(), help_command=None)
-@bot.event
-async def on_command_error(ctx, error):
-    if isinstance(error, commands.CommandOnCooldown):
-        timeremaining = str(datetime.timedelta(seconds = int(error.retry_after)))
-        error_em = discord.Embed(title="CoolDown!", description=f"**Try again in {timeremaining}`` Hours/Minutes**", color = discord.Colour.red())
-        await ctx.reply(embed=error_em)
-
-THEME_COLOUR = discord.Colour.random()
-ERROR_COLOUR = discord.Colour.red()
 @bot.command(aliases=['bal'])
 async def balance(ctx):
     await open_account(ctx.author)
@@ -101,7 +92,40 @@ async def withdraw(ctx,amount = None):
 You Have Withdrawed `{amount}` From Your Bank!""" , color=discord.Colour.random())
     await ctx.reply(embed=withdraw)
 
+@bot.command(aliases=['give'])
+@commands.is_owner()
+async def addmoney(ctx,member:discord.Member=None,amount : int=None):
+    if member ==None:
+        await ctx.reply("Please Metion A Member")
+    elif amount==None:
+        await ctx.reply("Please Enter Amount")
+    else:
+        await open_account(ctx.author)
+        user = member
+        users = await get_bank_data()
+        bg = discord.Embed(title=f"**{user} Job**" , description=f"""
+Owner {ctx.author.mention} Donated `{amount}` to {member.mention}""" , color = discord.Colour.random())
+        await ctx.reply(embed=bg)
+        users[str(user.id)]["wallet"] += amount
+        with open("mainbank.json",'w') as f:
+            json.dump(users,f)
 
+@bot.command()
+@commands.is_owner()
+async def kill(ctx,member:discord.Member=None):
+    if member ==None:
+        await ctx.reply("Please Metion A Member")
+    else:
+        await open_account(ctx.author)
+        user = member
+        users = await get_bank_data()
+        bg = discord.Embed(title=f"**{user} Job**" , description=f"""
+Owner {ctx.author.mention} Killed {member.mention}
+{member.mention} All Coins Down!""" , color = discord.Colour.random())
+        await ctx.reply(embed=bg)
+        users[str(user.id)]["wallet"] = 0
+        with open("mainbank.json",'w') as f:
+            json.dump(users,f)
 @bot.command(aliases=['dep'])
 async def deposit(ctx,amount = None):
     await open_account(ctx.author)
@@ -144,9 +168,8 @@ async def richest(ctx,x = 1):
     index = 1
     for amt in total:
         id_ = leader_board[amt]
-        member = client.get_user(id_)
-        name = member.name
-        em.add_field(name = f"{index}. {name}" , value = f"{amt}",  inline = False)
+        name = ctx.message.guild.get_member(id_)
+        em.add_field(name = f"{index}. {name}" , value = f"{amt}",  inline = True)
         if index == x:
             break
         else:

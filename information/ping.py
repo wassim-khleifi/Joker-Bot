@@ -1,16 +1,15 @@
 import discord
 from discord.ext import commands
+import datetime
+import time
+import typing
 ########### IMPORT CONFIGS ##############
 import config
 from config import *
-bot = commands.Bot(command_prefix= prefix, intents=discord.Intents.all(), help_command=None)
-
-THEME_COLOUR = discord.Colour.random()
-EVENTS_COLOR = discord.Colour.random()
-INFO_COLOR = discord.Colour.blurple()
-MOD_COLOR = discord.Colour.blurple()
-ERROR_COLOUR = discord.Colour.red()
-@bot.command(description="Shows the heartbeats of the bot")
-async def ping(ctx):
-   pingEm = discord.Embed(title=f"Ping Pong", description=f"Bot latency :  `{round(bot.latency * 1000)}ms` ", color=THEME_COLOUR)
-   await ctx.reply(embed=pingEm)
+class Ping(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+    @commands.command(name="ping")
+    async def ping(self, ctx):
+    	embed = discord.Embed(title="***__Bot Ping__***" , description=f"**Pong! 🏓 ** `{round(self.bot.latency * 1000)}` **ms**" , color=THEME_COLOUR)
+    	await ctx.reply(embed=embed)
