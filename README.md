@@ -1,7 +1,6 @@
 <img src= "joker bot.png">
 
-![Release](https://img.shields.io/github/v/release/clown83848474/Discord-Bot)
-![Forks](https://img.shields.io/github/forks/clown83848474/Discord-Bot)
+![Downloads](https://img.shields.io/github/downloads/clown83848474/Discord-Bot/total.svg)
 ![License](https://img.shields.io/github/license/clown83848474/Discord-Bot.svg)
 ![size](https://img.shields.io/github/repo-size/clown83848474/Discord-Bot)
 <img alt="Bitbucket open issues" src="https://img.shields.io/bitbucket/issues/clown83848474/Discord-Bot">
