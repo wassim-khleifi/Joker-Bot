@@ -9,18 +9,15 @@
 # Joker Bot
 
 
-> A Discord Bot With A Lot Of Features Made With Discord.py, and that is easy to set up and run yourself!
+> This is my first Discord bot, where I practiced and learned Discord.py and its features. The code might be a bit messy, but it can be helpful for beginners looking to explore the power of the library.
 
 ## Features
   * Easy to run (just make sure Discord.py is installed, and run!)
   * Includes DataBase For Economy
   * No external keys needed (besides a Discord Bot token)
-  * Config.py File So You Dont Need To Edit The Code
+  * config.py File So You Dont Need To Edit The Code
   * A Lot Of Commands For Moderation, Economy And More!
   * Clean and beautiful Design For Embeds
-  * A Cool Website For The Bot
-  * A Beautiful Responsive Website (Pc And Phone)
-  * More Updates And Commands In Future
 ### Requirements
   * Python +3.7V
   * Discord.py
@@ -51,11 +48,6 @@
   ```sh
   python main.py
   ```
-
- 
-## Hosting:
-* You Can Host The Website With  <a href="https://app.infinityfree.net">Host</a>
-* If You Got Problems You Can Contact Me On Discord <a href="https://discord.gg/HbxRqqraqz">Discord</a>
 
 ## Commands:
 * **help**
